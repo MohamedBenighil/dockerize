@@ -1,7 +1,7 @@
 # Prerequisite
-- DOcker engine 
+- Docker engine 
 
-# quickstart
+# Quickstart
 - Build the image: `docker build -t mbe .`
 - Create an instance from it : `docker run -p 8080:80 --rm mbe`
 - Make sure it is up and running: `docker ps`
