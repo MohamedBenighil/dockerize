@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+
+  static:
+    build: ./static/
+#    ports:
+#      - 9000:80
+
+  api:
+    image: mohamedbenighil/go-rest-api:v1
+#    ports:
+#      - 8000:8000
+    environment:
+      ADMIN_PASSWORD: somthing
+
+  proxy:
+    image: nginx:1.21.5-alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
