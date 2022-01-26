@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  java-api:
+    build: ./gs-rest-service/complete/
+    ports:
+      - 8080:8080
