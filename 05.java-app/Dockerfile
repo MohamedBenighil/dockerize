@@ -1,8 +1,8 @@
 # syntax = docker/dockerfile:1.3
 FROM maven:3.8.4-openjdk-8-slim as build
 WORKDIR /code
-#COPY pom.xml .
-#RUN mvn install
+COPY ./gs-rest-service/complete/pom.xml .
+RUN --mount=type=cache,target=/root/.m2/repository mvn dependency:go-offline -B
 COPY ./gs-rest-service/complete/ .
 RUN --mount=type=cache,target=/root/.m2/repository mvn package
 
