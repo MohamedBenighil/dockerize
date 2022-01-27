@@ -14,7 +14,7 @@ Helloworld webapp based on the go framework Gin.
 
 # Authors
 
-- Abdennour <http://kubernetes.tn>
+- Mohamed Benighil
 
 # License 
 
